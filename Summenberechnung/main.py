@@ -4,4 +4,4 @@ summe = 0
 for i in range(1, 11):
     summe = summe + i
 
-print(summe)
+print(summe) 
