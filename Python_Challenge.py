@@ -96,63 +96,68 @@ print("-------------------------------------------------------------------------
 
 # Vereinfachtes Verzeichnis anlegen wenn man nur die Emailadressen kennt.
 
-"""a. ) Ziehe einen Namen aus einer Mailadresse der Form name@service.com
-Wenn die Mailadresse Max-Mustermann@gmail.com lautet, sollst du Max-Mustermann ausgeben; 
-wenn die Mailadresse KlaraKlarnamen@uni-berlin.de heisst, sollst du KlaraKlarnamen ausgeben.
-Hinweis: Schau dir dazu auf jeden Fall nochmal die .split() - Methode an. 
-Damit kannst du z. B. eine E-Mail-Adresse am @ - Symbol zersÃ¤gen / zerlegen.
-In [5]:
+# a. ) Ziehe einen Namen aus einer Mailadresse der Form name@service.com
+# Wenn die Mailadresse Max-Mustermann@gmail.com lautet, sollst du Max-Mustermann ausgeben; 
+# wenn die Mailadresse KlaraKlarnamen@uni-berlin.de heisst, sollst du KlaraKlarnamen ausgeben.
+# Hinweis: Schau dir dazu auf jeden Fall nochmal die .split() - Methode an. 
+# Damit kannst du z. B. eine E-Mail-Adresse am @ - Symbol zersägen / zerlegen.
+
+
 mail = "willy.wizard@zauberschule.de"
-"""
-mail = "willy.wizard@zauberschule.de"
+
 print(mail.split("@")[0]
+
 # Korrekte Ausgabe:
 # willy.wizard
 
 
 
 # b.) Ziehe einen Namen aus einer Mailadresse der Form info@name.com
-# Manchmal stehen die Namen bei einer Mailadresse auch erst hinter dem @-Zeichen. Gebe auch fÃ¼r solche FÃ¤lle die Namen aus; 
+# Manchmal stehen die Namen bei einer Mailadresse auch erst hinter dem @-Zeichen. Gebe auch für solche Fälle die Namen aus; 
 # entferne dabei die Endung .com bzw. .de. Du darfst dazu voraussetzen, dass innerhalb des Namens kein Punkt vorkommt. 
 # Wenn die Mailadresse also info@Max-Mustermann.com lautet, sollst du Max-Mustermann ausgeben.
-# Hinweis: Es ist okay, wenn du fÃ¼r die Berechnung mehere .split() - Befehle benÃ¶tigst, oder ein Ergebnis zwischenspeichern mÃ¶chtest. 
+# Hinweis: Es ist okay, wenn du fÃ¼r die Berechnung mehere .split() - Befehle benötigst, oder ein Ergebnis zwischenspeichern mÃ¶chtest. 
 # Gerne kannst du auch den Code aus der Teilaufgabe a) hier mitverwenden.
-# In [6]:
-# mail = "info@helena-hexe.com"
-
-# Berechne hier den hinteren Teil der gegebenen E-Mail - Adresse
 
 # Korrekte Ausgabe:
 # helena-hexe
 
+mail = "info@helena-hexe.com"
+
+print(mail.split("@")[1].split(".")[0])
 # c.) Berechne: Wie viele Kunden gibt es im Online-Shop?
-# Aktuell legen alle Kunden (mail1, mail2, mail3) als separate Variable vor. Wir mÃ¶chten daraus jetzt eine Liste bauen, sodass wir die MÃ¶glichkeit hÃ¤tten, 
-# spÃ¤ter noch weitere Kunden in diese Liste hinzuzufÃ¼gen.
-# ÃœberfÃ¼hre deswegen die Kunden mail1, mail2 und mail3 in die Liste clients und 
-# lasse dir anschlieÃŸend die Anzahl der Elemente der Liste clients mit Hilfe von Python ausgeben.
-# In [8]:
+# Aktuell legen alle Kunden (mail1, mail2, mail3) als separate Variable vor. Wir möchten daraus jetzt eine Liste bauen, sodass wir die Möglichkeit hätten, 
+# später noch weitere Kunden in diese Liste hinzuzufÃ¼gen.
+# überführe deswegen die Kunden mail1, mail2 und mail3 in die Liste clients und 
+# lasse dir anschliessend die Anzahl der Elemente der Liste clients mit Hilfe von Python ausgeben.
 # mail1 = "zarah.zauber@zauberberg.de"
 # mail2 = "info@trixie-trickser.com"
 # mail3 = "uwe_unhold@dunkelnetz.de" 
 
-# clients = []
+mail1 = "zarah.zauber@zauberberg.de"
+mail2 = "info@trixie-trickser.com"
+mail3 = "uwe_unhold@dunkelnetz.de" 
 
-# Füge hier mail1, mail2, mail3 zur clients - Liste hinzu
+clients = []
 
-# print(clients)
+clients.append(mail1)
+clients.append(mail2)
+clients.append(mail3)
 
-# []
+print(clients)
 
-# Korrekte Ausgabe (braucht nicht farbig zu sein):
 # ['zarah.zauber@zauberberg.de', 'info@trixie-trickser.com', 'uwe_unhold@dunkelnetz.de']
-# In [9]:
 # Gebe hier die Anzahl der Elemente der Liste clients aus
-
-# GewÃ¼nschte Ausgabe:
+print(len(clients))
+# Gewünschte Ausgabe:
 # 3
 
 # d.) Eine Mailadresse aus Strings zusammenbauen
-# PlÃ¶tzlich fÃ¤llt der Mathemagierin ein, dass in der Liste clients noch ihr wichtigster Onlineshop-Kunde fehlt. Die Infos zu ihm wurden bei einem misslungenen Trick in zwei Teile zersÃ¤gt und liegen seitdem in der Liste ["Buehnenzauberer", "magic.com"] herum.
-# Rekonstruiere mit Hilfe von Python die Mailadresse des Kunden (da fehlt ein @ zwischen "Buehnenzauberer" und "magic.com") und gebe sie aus, damit sich der Onlineshop-Kundendienst nach seinem Wohlbefinden erkundigen kann.
-# In [10]:
-# zauberer = ["Buehnenzauberer", "magic.com"]
+# Plötzlich fällt der Mathemagierin ein, dass in der Liste clients noch ihr wichtigster Onlineshop-Kunde fehlt. 
+# Die Infos zu ihm wurden bei einem misslungenen Trick in zwei Teile zersägt und liegen seitdem in der Liste ["Buehnenzauberer", "magic.com"] herum.
+# Rekonstruiere mit Hilfe von Python die Mailadresse des Kunden (da fehlt ein @ zwischen "Buehnenzauberer" und "magic.com") und gebe sie aus, 
+# damit sich der Onlineshop-Kundendienst nach seinem Wohlbefinden erkundigen kann.
+
+zauberer = ["Buehnenzauberer", "magic.com"]
+
+print("@".join(zauberer))
