@@ -82,7 +82,8 @@ print(int(result)) #ohne Nachkommastellen
 
 """"Du hast 6 ausgewählt, das magische Ergebnis ist 11!"
 aus, wobei für die Zahl 6 die Variable number und für die Zahl 11 das Ergebnis (Variable result) eingesetzt werden soll.
-Hinweis: In Python darf ein print - Befehl wie folgt über mehrere Zeilen gehen. Das könnte praktisch sein, gerade wenn du viele Strings hintereinander hängen möchtest:
+Hinweis: In Python darf ein print - Befehl wie folgt über mehrere Zeilen gehen. 
+Das könnte praktisch sein, gerade wenn du viele Strings hintereinander hängen möchtest:
 """
 print("Du hast " + 
       str(number) + 
@@ -113,10 +114,13 @@ print(mail.split("@")[0]
 
 
 # b.) Ziehe einen Namen aus einer Mailadresse der Form info@name.com
-# Manchmal stehen die Namen bei einer Mailadresse auch erst hinter dem @-Zeichen. Gebe auch für solche Fälle die Namen aus; 
-# entferne dabei die Endung .com bzw. .de. Du darfst dazu voraussetzen, dass innerhalb des Namens kein Punkt vorkommt. 
+# Manchmal stehen die Namen bei einer Mailadresse auch erst hinter dem @-Zeichen. 
+# Gebe auch für solche Fälle die Namen aus; 
+# entferne dabei die Endung .com bzw. .de. Du darfst dazu voraussetzen, 
+# dass innerhalb des Namens kein Punkt vorkommt. 
 # Wenn die Mailadresse also info@Max-Mustermann.com lautet, sollst du Max-Mustermann ausgeben.
-# Hinweis: Es ist okay, wenn du fÃ¼r die Berechnung mehere .split() - Befehle benötigst, oder ein Ergebnis zwischenspeichern mÃ¶chtest. 
+# Hinweis: Es ist okay, wenn du fÃ¼r die Berechnung mehere .split() - Befehle benötigst, 
+# oder ein Ergebnis zwischenspeichern möchtest. 
 # Gerne kannst du auch den Code aus der Teilaufgabe a) hier mitverwenden.
 
 # Korrekte Ausgabe:
@@ -126,7 +130,8 @@ mail = "info@helena-hexe.com"
 
 print(mail.split("@")[1].split(".")[0])
 # c.) Berechne: Wie viele Kunden gibt es im Online-Shop?
-# Aktuell legen alle Kunden (mail1, mail2, mail3) als separate Variable vor. Wir möchten daraus jetzt eine Liste bauen, sodass wir die Möglichkeit hätten, 
+# Aktuell legen alle Kunden (mail1, mail2, mail3) als separate Variable vor. 
+# Wir möchten daraus jetzt eine Liste bauen, sodass wir die Möglichkeit hätten, 
 # später noch weitere Kunden in diese Liste hinzuzufÃ¼gen.
 # überführe deswegen die Kunden mail1, mail2 und mail3 in die Liste clients und 
 # lasse dir anschliessend die Anzahl der Elemente der Liste clients mit Hilfe von Python ausgeben.
@@ -154,8 +159,10 @@ print(len(clients))
 
 # d.) Eine Mailadresse aus Strings zusammenbauen
 # Plötzlich fällt der Mathemagierin ein, dass in der Liste clients noch ihr wichtigster Onlineshop-Kunde fehlt. 
-# Die Infos zu ihm wurden bei einem misslungenen Trick in zwei Teile zersägt und liegen seitdem in der Liste ["Buehnenzauberer", "magic.com"] herum.
-# Rekonstruiere mit Hilfe von Python die Mailadresse des Kunden (da fehlt ein @ zwischen "Buehnenzauberer" und "magic.com") und gebe sie aus, 
+# Die Infos zu ihm wurden bei einem misslungenen Trick in zwei Teile zersägt 
+# und liegen seitdem in der Liste ["Buehnenzauberer", "magic.com"] herum.
+# Rekonstruiere mit Hilfe von Python die Mailadresse des Kunden 
+# (da fehlt ein @ zwischen "Buehnenzauberer" und "magic.com") und gebe sie aus, 
 # damit sich der Onlineshop-Kundendienst nach seinem Wohlbefinden erkundigen kann.
 
 zauberer = ["Buehnenzauberer", "magic.com"]
